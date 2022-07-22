@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* CSS Document */
+@font-face {
+  font-family: 'Lora-Bold';
+  src: url('../font/Lora-Bold.ttf');
+}
+@font-face {
+  font-family: 'Lora-Italic';
+  src: url('../font/Lora-Italic.ttf');
+}
+@font-face {
+  font-family: 'Lora-Medium';
+  src: url('../font/Lora-Medium.ttf');
+}
+@font-face {
+  font-family: 'Lora-Regular';
+  src: url('../font/Lora-Regular.ttf');
+}
+@font-face {
+  font-family: 'Lora-SemiBold';
+  src: url('../font/Lora-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'NotoSerifJP-Bold';
+  src: url('../font/NotoSerifJP-Bold.otf');
+}
+@font-face {
+  font-family: 'NotoSerifJP-Light';
+  src: url('../font/NotoSerifJP-Light.otf');
+}
+@font-face {
+  font-family: 'NotoSerifJP-Medium';
+  src: url('../font/NotoSerifJP-Medium.otf');
+}
+@font-face {
+  font-family: 'NotoSerifJP-Regular';
+  src: url('../font/NotoSerifJP-Regular.otf');
+}
+@font-face {
+  font-family: 'NotoSerifJP-SemiBold';
+  src: url('../font/NotoSerifJP-SemiBold.otf');
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  color: #000;
+  font-family: 'Lora-Regular', 'NotoSerifJP-Regular', serif;
+  background: #fff;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
