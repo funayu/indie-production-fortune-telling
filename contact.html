@@ -5,12 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
-    <meta name="”keywords”" content="占い,鑑定,オンライン,リモート,悩み,相談,LINE,Zoom,テレビ通話,テレビ電話" />
-    <meta
-      name="description"
-      content="当たると評判のオンライン占いならFortune Adviser。あなたのお悩み、ご相談の解決をプロの占い師がお手伝いいたします。"
-    />
-    <title>Fortune Adviser（フォーチュン アドバイザー）| 当たると評判のオンライン占いサービス</title>
+    <meta name="keywords" content="占い,鑑定,オンライン,リモート,悩み,相談,LINE,Zoom,テレビ通話,テレビ電話" />
+    <meta name="description" content="オンライン占いサービス「Fortune Adviser」の鑑定お申し込みページです。" />
+    <title>Fortune Adviser | 鑑定のお申込み</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -80,14 +77,14 @@
             <dl>
               <dt>相談したい内容（複数選択可能）</dt>
               <dd>
-                <label><input type="checkbox" name="consultation＿content" value="恋愛" />恋愛</label>
-                <label><input type="checkbox" name="consultation＿content" value="仕事" />仕事</label>
-                <label><input type="checkbox" name="consultation＿content" value="家庭" />家庭</label>
-                <label><input type="checkbox" name="consultation＿content" value="人間関係" />人間関係</label>
-                <label><input type="checkbox" name="consultation＿content" value="性格・強み" />性格・強み</label>
-                <label><input type="checkbox" name="consultation＿content" value="運勢" />運勢</label>
-                <label><input type="checkbox" name="consultation＿content" value="お金" />お金</label>
-                <label><input type="checkbox" name="consultation＿content" value="その他" />その他</label>
+                <label><input type="checkbox" name="consultation_content[]" value="恋愛" />恋愛</label>
+                <label><input type="checkbox" name="consultation_content[]" value="仕事" />仕事</label>
+                <label><input type="checkbox" name="consultation_content[]" value="家庭" />家庭</label>
+                <label><input type="checkbox" name="consultation_content[]" value="人間関係" />人間関係</label>
+                <label><input type="checkbox" name="consultation_content[]" value="性格・強み" />性格・強み</label>
+                <label><input type="checkbox" name="consultation_content[]" value="運勢" />運勢</label>
+                <label><input type="checkbox" name="consultation_content[]" value="お金" />お金</label>
+                <label><input type="checkbox" name="consultation_content[]" value="その他" />その他</label>
               </dd>
             </dl>
             <p>
@@ -220,7 +217,7 @@
                     <option value="12">12</option>
                   </select>
                   <span>月</span>
-                  <select name="birth_day">
+                  <select name="birth_date">
                     <option value="">日</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -411,7 +408,7 @@
               <dl>
                 <dt>生年月日</dt>
                 <dd>
-                  <select name="birth_year">
+                  <select name="birth_year2">
                     <option value="">年</option>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
@@ -516,7 +513,7 @@
                     <option value="1922">1922</option>
                   </select>
                   <span>年</span>
-                  <select name="birth_month">
+                  <select name="birth_month2">
                     <option value="">月</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -532,7 +529,7 @@
                     <option value="12">12</option>
                   </select>
                   <span>月</span>
-                  <select name="birth_day">
+                  <select name="birth_date2">
                     <option value="">日</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -570,7 +567,7 @@
                 </dd>
                 <dt>出生時刻</dt>
                 <dd>
-                  <select name="birth_hour">
+                  <select name="birth_hour2">
                     <option value="">時</option>
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -598,7 +595,7 @@
                     <option value="23">23</option>
                   </select>
                   <span>時</span>
-                  <select name="birth_min">
+                  <select name="birth_min2">
                     <option value="">分</option>
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -665,7 +662,7 @@
                 </dd>
                 <dt>出生地</dt>
                 <dd>
-                  <select name="birth_place">
+                  <select name="birth_place2">
                     <option selected="selected">選択してください</option>
                     <option value="北海道">北海道</option>
                     <option value="青森県">青森県</option>
