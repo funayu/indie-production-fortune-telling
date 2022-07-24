@@ -132,7 +132,7 @@ $birth_place2 = isset($_POST["birth_place2"])? $_POST["birth_place2"] : "";
             </dl>
           </section>
           <section>
-            <h4>◆相手の情報（占いたい相手がいる場合</h4>
+            <h4>◆相手の情報（占いたい相手がいる場合）</h4>
             <dl>
               <dt>生年月日</dt>
               <dd>
