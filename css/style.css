@@ -115,6 +115,17 @@ nav {
   background-color: #aaa;
   position: relative;
 }
+.topPage #top_main .top_main_movie {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.topPage #top_main .top_main_movie video {
+  /* 縦いっぱい sp, tablet */
+  width: calc(2156 / 1440 * 84.806vh);
+  /* 横いっぱい labtop */
+  /* height: calc(1440 / 2156 * 100vw); */
+}
 .topPage #top_main .inner {
   text-align: center;
   position: absolute;
@@ -242,4 +253,24 @@ article#about_service section ul li {
   background: url('../images/about_service/list-point.svg') left 0px top 0px no-repeat;
   background-size: 20px auto;
   padding-left: 2em;
+}
+/* TAB用 */
+@media screen and (min-width: 600px) {
+}
+/* PC用 */
+@media screen and (min-width: 960px) {
+  .topPage #top_main {
+    background-color: #000;
+  }
+  .topPage #top_main .top_main_movie {
+    height: 100%;
+    align-items: center;
+  }
+  .topPage #top_main .top_main_movie video {
+    /* 縦いっぱい sp, tablet */
+    /* width: calc(2156 / 1440 * 84.806vh); */
+    width: auto;
+    /* 横いっぱい labtop */
+    height: calc(1440 / 2156 * 100vw);
+  }
 }
