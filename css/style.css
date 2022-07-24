@@ -49,6 +49,7 @@ body {
   font-family: 'Lora-Regular', 'NotoSerifJP-Regular', serif;
   background: #fff;
   line-height: 1.5;
+  letter-spacing: 0.05em;
   -webkit-text-size-adjust: 100%;
 }
 img {
@@ -140,13 +141,25 @@ article#message h2 {
   font-family: 'Lora-SemiBold';
   text-align: center;
   letter-spacing: 0.1em;
+  margin-bottom: 17.5px;
 }
-
-#line {
+article#message .scroll {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 49.5px;
+}
+article#message .scroll_line {
   stroke-dasharray: 47px;
-  animation: just 3.2s linear infinite;
+  animation: strokeLine 3.2s linear infinite;
 }
-@keyframes just {
+article#message .scroll p {
+  color: #eadcee;
+  font-size: 10px;
+  font-family: 'Lora-SemiBold';
+  line-height: 47px;
+  margin-left: 6.5px;
+}
+@keyframes strokeLine {
   0% {
     stroke-dashoffset: 47px;
   }
@@ -172,4 +185,61 @@ article#message section p {
   letter-spacing: 0.05em;
   margin-bottom: 1em;
   text-shadow: 0px 0px 15px #fff, 0px 0px 30px #fff;
+}
+article#about_service,
+article#ask,
+article#introduce,
+article#price,
+article#how_to_use {
+  padding: 80px 0;
+}
+article#about_service h2,
+article#introduce h2,
+article#price h2,
+article#how_to_use h2 {
+  font-family: 'NotoSerifJP-Bold';
+  font-size: 24px;
+  color: #552862;
+  letter-spacing: 0.1em;
+  margin-bottom: 30px;
+}
+article#about_service h2 span,
+article#introduce h2 span,
+article#price h2 span,
+article#how_to_use h2 span {
+  display: block;
+  font-size: 12px;
+  font-family: 'Lora-SemiBold';
+  letter-spacing: 0.05em;
+}
+article#about_service {
+  background-color: #eadcee;
+}
+article#about_service p {
+  margin-bottom: 30px;
+}
+article#about_service section {
+  background-color: #fff;
+  padding: 50px 55.5px;
+  margin-bottom: 41.2px;
+}
+article#about_service section:last-of-type {
+  margin-bottom: 0;
+}
+article#about_service section img {
+  margin-bottom: 20px;
+}
+article#about_service section h3 {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'NotoSerifJP-SemiBold';
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
+}
+article#about_service section ul li {
+  font-size: 13px;
+  margin-bottom: 1em;
+  background: url('../images/about_service/list-point.svg') left 0px top 0px no-repeat;
+  background-size: 20px auto;
+  padding-left: 2em;
 }
