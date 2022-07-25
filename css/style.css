@@ -226,6 +226,7 @@ article#how_to_use h2 span {
 }
 article#about_service {
   background-color: #eadcee;
+  transform: translateY(-1px);
 }
 article#about_service p {
   margin-bottom: 76px;
@@ -503,6 +504,7 @@ article#price .option_price dd dl {
   font-size: 14px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 article#price .option_price dd dl:first-of-type {
   padding-bottom: 14.5px;
@@ -512,7 +514,10 @@ article#price .option_price dd dl:last-of-type {
   padding-top: 14.5px;
 }
 article#price .option_price dd dl dt {
-  width: 41%;
+  width: 42%;
+}
+article#price .option_price dd dl dd {
+  width: 56%;
 }
 article#price .inner > p {
   font-family: 'NotoSerifJP-Light';
@@ -650,6 +655,180 @@ footer ul li a {
 footer small {
   font-size: 10px;
 }
+
+/* 鑑定申し込みページ */
+#contact_main {
+  position: relative;
+}
+#contact_main img {
+  filter: brightness(80%);
+}
+#contact_main h2 {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 8.664vw;
+  font-family: 'NotoSerifJP-Bold';
+  font-size: 24px;
+  transform: translateY(-50%);
+  letter-spacing: 0.08em;
+}
+#contact_main h2 span {
+  display: block;
+  font-family: 'Lora-SemiBold';
+  font-size: 12px;
+  margin-bottom: 5px;
+  letter-spacing: 0.05em;
+}
+#progress {
+  background-color: #322a33;
+  padding: 30px 0;
+}
+#progress .inner {
+  display: flex;
+  justify-content: space-between;
+}
+#progress .inner > div {
+  font-family: 'NotoSerifJP-Medium';
+  color: rgba(255, 255, 255, 0.3);
+}
+#progress .inner > div.step {
+  color: rgba(255, 255, 255, 1);
+}
+#progress .inner > div > span {
+  font-size: 13px;
+  display: block;
+  font-family: 'Lora-Medium';
+  text-align: center;
+  position: relative;
+}
+#progress .inner > div > span::after {
+  content: '';
+  width: 17vw;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 5em;
+}
+#progress .inner > div.step > span::after {
+  background-color: rgba(255, 255, 255, 1);
+}
+#progress .inner > div:last-of-type > span::after {
+  content: none;
+}
+.contact form {
+  padding: 40px 0 80px;
+}
+.contact form section {
+  margin-bottom: 86px;
+}
+.contact form section > h3 {
+  color: #552862;
+  font-family: 'NotoSerifJP-SemiBold';
+}
+.contact form section > p {
+  color: #552862;
+  font-family: 'NotoSerifJP-SemiBold';
+  margin-bottom: 40px;
+}
+.contact form section > p > span.required {
+  color: #b01f1f;
+}
+.contact form section dl > dt {
+  font-size: 14px;
+  font-family: 'NotoSerifJP-Bold';
+  position: relative;
+}
+.contact form section dl > dt.required::after {
+  content: '※';
+  color: #b01f1f;
+  font-size: 0.5em;
+  position: absolute;
+  top: 0;
+}
+.contact form section dl > dd {
+  margin-bottom: 46px;
+}
+.contact form input::placeholder {
+  color: #8d8d8d;
+}
+.contact form input[type='text'],
+.contact form input[type='email'],
+.contact form input[type='tel'] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #707070;
+  outline: none;
+  padding: 1em 0;
+  font-family: 'NotoSerifJP-Regular';
+  font-size: 14px;
+}
+.contact form section > p.small {
+  font-size: 13px;
+  font-family: 'NotoSerifJP-Regular';
+  color: #1a1918;
+  letter-spacing: 0;
+  padding-top: 10px;
+}
+.contact form section > p.small .bold {
+  font-family: 'NotoSerifJP-Bold';
+}
+
+/* チェックボックスのカスタマイズ ここから */
+.contact form .checkbox_outer {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* デフォルトのチェックボックスは非表示にする */
+.contact form input[type='checkbox'] {
+  display: none;
+}
+/* カスタマイズしたチェックボックス */
+.contact form .custom_checkbox {
+  display: block;
+  position: relative;
+  margin: 1em 0;
+  padding-left: 28px;
+  cursor: pointer;
+  user-select: none;
+
+  width: 50%;
+}
+/* □ */
+.contact form .check_mark {
+  position: absolute;
+  top: 0; /* 上からの位置 */
+  left: 0;
+  height: 22px; /* 大きさ */
+  width: 22px; /* 大きさ */
+  border: solid 2px #d4dae2; /* 線 */
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+/* ✓ */
+.contact form .check_mark:after {
+  content: '';
+  position: absolute;
+  left: 5px; /* チェックの位置 */
+  top: 1px; /* チェックの位置 */
+  width: 6px; /* チェックの大きさ */
+  height: 10px; /* チェックの大きさ */
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0; /* 透明にしておく */
+}
+/* チェックが入ったときの□ */
+.contact form .custom_checkbox input:checked + .check_mark {
+  background: #823c96; /* チェック時の色 */
+  border-color: #823c96; /* チェック時の色 */
+}
+/* チェックが入ったときの✓ */
+.custom_checkbox input:checked + .check_mark:after {
+  opacity: 1; /* 透明を解除 */
+}
+/* チェックボックスのカスタマイズ ここまで */
 
 /* TAB用 */
 @media screen and (min-width: 600px) {

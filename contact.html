@@ -12,24 +12,41 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
-  <body>
-    <div class="inner">
-      <header>
-        <h1>ロゴ</h1>
-        <nav>
-          <ul>
-            <li><a href="contact.html">Message</a></li>
-            <li><a href="contact.html">サービス概要</a></li>
-            <li><a href="contact.html">所属占い師の紹介</a></li>
-            <li><a href="contact.html">鑑定料金</a></li>
-            <li><a href="contact.html">サービスご利用方法</a></li>
-            <li><a href="contact.html">鑑定のお申込み→</a></li>
-          </ul>
-        </nav>
-        <div>（ハンバーガーメニュー）</div>
-      </header>
-    </div>
+  <body class="contact">
+    <header>
+      <h1>
+        <a href="index.html"><img src="images/logo/logo_white.svg" alt="Fortune Adviser" /></a>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="#">Message</a></li>
+          <li><a href="#">サービス概要</a></li>
+          <li><a href="#">所属占い師の紹介</a></li>
+          <li><a href="#">鑑定料金</a></li>
+          <li><a href="#">サービスご利用方法</a></li>
+          <li><a href="#">鑑定のお申込み→</a></li>
+        </ul>
+      </nav>
+      <!-- ハンバーガーボタン押下時に表示されるレイヤー -->
+      <div class="coverlayer"></div>
+      <!-- .coverlayerの終了タグ -->
+      <!--ハンバーガーボタン-->
+      <div class="btnHamburger">
+        <span class="line line_01"></span>
+        <span class="line line_02"></span>
+        <span class="line line_03"></span>
+      </div>
+      <!-- .btnHamburgerの終了タグ  -->
+    </header>
     <div id="contact_main">
+      <picture>
+        <source
+          media="(max-width: 599px)"
+          srcset="images/contact/top_main_sp@856.jpg 2x, images/contact/top_main_sp@1284.jpg 3x"
+        />
+        <source media="(max-width: 959px)" srcset="images/contact/top_main@1920.jpg 2x" />
+        <img src="images/contact/top_main@1920.jpg" alt="大きな月と木" />
+      </picture>
       <h2>
         <span>Contact</span>
         鑑定のお申し込み
@@ -37,9 +54,9 @@
     </div>
     <!-- #contact_mainの終了タグ -->
     <main>
-      <div class="inner">
-        <div id="progress">
-          <div>
+      <div id="progress">
+        <div class="inner">
+          <div class="step">
             <span>01</span>
             内容入力
           </div>
@@ -52,39 +69,85 @@
             送信完了
           </div>
         </div>
-        <!-- #progressの終了タグ -->
+      </div>
+      <!-- #progressの終了タグ -->
+      <div class="inner">
         <form action="confirm.php" method="post" id="contact">
           <section>
             <h3>お客様情報の入力をお願いいたします。</h3>
-            <p>（<span>※</span>は入力必須です）</p>
+            <p>（<span class="required">※</span>は入力必須です）</p>
             <dl>
-              <dt>お名前<span>※</span></dt>
-              <dd><input type="text" size="30" name="name" id="name" /></dd>
-              <dt>メールアドレス※</dt>
-              <dd><input type="email" size="30" name="email" id="email" /></dd>
-              <dt>メールアドレス（確認）<span>※</span></dt>
-              <dd><input type="email" size="30" name="email_confirmation" id="email_confirmation" /></dd>
-              <dt>電話番号<span>※</span></dt>
-              <dd><input type="tel" size="30" name="tel" id="tel" /></dd>
+              <dt class="required">お名前</dt>
+              <dd><input type="text" size="30" name="name" id="name" placeholder="例）山田太郎" /></dd>
+              <dt class="required">メールアドレス</dt>
+              <dd>
+                <input type="email" size="30" name="email" id="email" placeholder="例）sample@fortune-adviser.com" />
+              </dd>
+              <dt class="required">メールアドレス（確認）</dt>
+              <dd>
+                <input
+                  type="email"
+                  size="30"
+                  name="email_confirmation"
+                  id="email_confirmation"
+                  placeholder="例）sample@fortune-adviser.com"
+                />
+              </dd>
+              <dt class="required">電話番号</dt>
+              <dd><input type="tel" size="30" name="tel" id="tel" placeholder="例）000-1111-2222" /></dd>
               <dd></dd>
             </dl>
           </section>
           <section>
             <h3>占いのために必要な情報を入力してください。</h3>
-            <p>
-              ※こちらの情報は鑑定当日にもお伝えいただけますが、時間を有効にお使いいただくため事前の登録をおすすめしております。<br />また。これらの情報はフォーム送信後にお知らせするURLからも登録・編集が可能です。
+            <p class="small">
+              ※こちらの情報は鑑定当日にもお伝えいただけますが、時間を有効にお使いいただくため<span class="bold"
+                >事前の登録</span
+              >をおすすめしております。<br />また。これらの情報はフォーム送信後にお知らせするURLからも登録・編集が可能です。
             </p>
             <dl>
               <dt>相談したい内容（複数選択可能）</dt>
-              <dd>
-                <label><input type="checkbox" name="consultation_content[]" value="恋愛" />恋愛</label>
-                <label><input type="checkbox" name="consultation_content[]" value="仕事" />仕事</label>
-                <label><input type="checkbox" name="consultation_content[]" value="家庭" />家庭</label>
-                <label><input type="checkbox" name="consultation_content[]" value="人間関係" />人間関係</label>
-                <label><input type="checkbox" name="consultation_content[]" value="性格・強み" />性格・強み</label>
-                <label><input type="checkbox" name="consultation_content[]" value="運勢" />運勢</label>
-                <label><input type="checkbox" name="consultation_content[]" value="お金" />お金</label>
-                <label><input type="checkbox" name="consultation_content[]" value="その他" />その他</label>
+              <dd class="checkbox_outer">
+                <label class="custom_checkbox">
+                  <input type="checkbox" name="consultation_content[]" value="恋愛" />
+                  <span class="check_mark"></span>
+                  恋愛
+                </label>
+                <label class="custom_checkbox">
+                  <input type="checkbox" name="consultation_content[]" value="仕事" />
+                  <span class="check_mark"></span>
+                  仕事
+                </label>
+                <label class="custom_checkbox">
+                  <input type="checkbox" name="consultation_content[]" value="家庭" />
+                  <span class="check_mark"></span>
+                  家庭
+                </label>
+                <label class="custom_checkbox">
+                  <input type="checkbox" name="consultation_content[]" value="人間関係" />
+                  <span class="check_mark"></span>
+                  人間関係
+                </label>
+                <label class="custom_checkbox">
+                  <input type="checkbox" name="consultation_content[]" value="性格・強み" />
+                  <span class="check_mark"></span>
+                  性格・強み
+                </label>
+                <label class="custom_checkbox">
+                  <input type="checkbox" name="consultation_content[]" value="運勢" />
+                  <span class="check_mark"></span>
+                  運勢
+                </label>
+                <label class="custom_checkbox">
+                  <input type="checkbox" name="consultation_content[]" value="お金" />
+                  <span class="check_mark"></span>
+                  お金
+                </label>
+                <label class="custom_checkbox">
+                  <input type="checkbox" name="consultation_content[]" value="その他" />
+                  <span class="check_mark"></span>
+                  その他
+                </label>
               </dd>
             </dl>
             <p>
@@ -722,15 +785,19 @@
     </main>
     <footer>
       <div class="inner">
-        <div>ロゴ</div>
+        <div>
+          <a href="index.html"><img src="images/logo/logo_white.svg" alt="Fortune Adviser" /></a>
+        </div>
         <p>contact@fortune-adviser.com</p>
         <ul>
-          <li><a href="#">Message</a></li>
-          <li><a href="#">サービス概要</a></li>
-          <li><a href="#">所属占い師の紹介</a></li>
-          <li><a href="#">鑑定料金</a></li>
-          <li><a href="#">サービスご利用方法</a></li>
-          <li><a href="#">鑑定のお申込み→</a></li>
+          <li><a href="index.html#message">Message</a></li>
+          <li><a href="index.html#about_service">サービス概要</a></li>
+          <li><a href="index.html#introduce">所属占い師の紹介</a></li>
+          <li><a href="index.html#price">鑑定料金</a></li>
+          <li><a href="index.html#how_to_use">サービスご利用方法</a></li>
+          <li class="contact">
+            <a href="contact.html">鑑定のお申込み<span>→</span></a>
+          </li>
         </ul>
         <small>&copy; 2022 Fortune Adviser. All Rights Reserved.</small>
       </div>
