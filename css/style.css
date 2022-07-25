@@ -249,8 +249,15 @@ article#about_service section .number {
   background-clip: text;
   color: transparent;
 }
-article#about_service section img {
+article#about_service section .service_image {
   margin-bottom: 20px;
+  width: 56.775vw;
+  height: 41.121vw;
+}
+article#about_service section img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 article#about_service section h3 {
   text-align: center;
@@ -266,9 +273,62 @@ article#about_service section ul li {
   background-size: 20px auto;
   padding-left: 2em;
 }
+article#ask {
+  background: #162d87;
+}
+article#ask h2 {
+  color: #d7def8;
+  font-size: 25px;
+  font-family: 'NotoSerifJP-Bold';
+  text-align: center;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  width: 9em;
+  padding: 10px 0;
+  margin: 0 auto 60.5px;
+}
+article#ask section {
+  display: flex;
+  gap: 7.009vw;
+  align-items: center;
+  margin-bottom: 37px;
+}
+article#ask section:nth-of-type(2) {
+  padding-left: 7.476vw;
+}
+article#ask section .worry_sentence {
+  background: #edf0fc;
+  width: 40.186vw;
+  height: 40.186vw;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px #edf0fc, 0px 0px 25px #edf0fc;
+}
+article#ask section h3 {
+  color: #162d87;
+  font-size: 13px;
+  font-family: 'NotoSerifJP-SemiBold';
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+article#ask section .worry_img {
+  width: 29.439vw;
+  height: 29.439vw;
+}
+article#ask section .worry_img img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
 /* TAB用 */
 @media screen and (min-width: 600px) {
 }
+
 /* PC用 */
 @media screen and (min-width: 960px) {
   .topPage #top_main {
