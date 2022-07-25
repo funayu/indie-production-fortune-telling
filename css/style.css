@@ -153,20 +153,23 @@ article#message h2 {
   margin-bottom: 17.5px;
 }
 article#message .scroll {
-  display: flex;
-  justify-content: center;
   margin-bottom: 49.5px;
+  text-align: center;
+  position: relative;
 }
 article#message .scroll_line {
   stroke-dasharray: 47px;
   animation: strokeLine 3.2s linear infinite;
 }
-article#message .scroll p {
+article#message .scroll::after {
+  content: 'scroll';
   color: #eadcee;
   font-size: 10px;
   font-family: 'Lora-SemiBold';
-  line-height: 47px;
-  margin-left: 6.5px;
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  transform: translateY(-50%);
 }
 @keyframes strokeLine {
   0% {
@@ -244,7 +247,7 @@ article#about_service section .number {
   transform: translateY(-60%);
   font-family: 'Lora-Italic';
   display: inline-block;
-  background: linear-gradient(#1e3cb4 0%, #6a83e5 100%);
+  background: linear-gradient(145deg, #1e3cb4 0%, #6a83e5 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -281,17 +284,41 @@ article#ask h2 {
   font-size: 25px;
   font-family: 'NotoSerifJP-Bold';
   text-align: center;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  /* border-top: 1px solid #fff; */
+  /* border-bottom: 1px solid #fff; */
   width: 9em;
   padding: 10px 0;
   margin: 0 auto 60.5px;
+  text-shadow: 0px 0px 10px #edf0fc, 0px 0px 15px #edf0fc;
+  letter-spacing: 0.1em;
+
+  position: relative;
+}
+article#ask h2::before,
+article#ask h2::after {
+  content: '';
+  width: 10em;
+  height: 2px;
+  background-color: #edf0fc;
+  box-shadow: 0px 0px 10px #fff, 0px 0px 20px #fff, 0px 0px 30px #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+article#ask h2::before {
+  top: 0;
+}
+article#ask h2::after {
+  bottom: 0;
 }
 article#ask section {
   display: flex;
   gap: 7.009vw;
   align-items: center;
   margin-bottom: 37px;
+}
+article#ask section:last-of-type {
+  margin-bottom: 80px;
 }
 article#ask section:nth-of-type(2) {
   padding-left: 7.476vw;
@@ -318,11 +345,133 @@ article#ask section h3 {
 article#ask section .worry_img {
   width: 29.439vw;
   height: 29.439vw;
+  position: relative;
 }
 article#ask section .worry_img img {
   object-fit: contain;
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 1;
+}
+article#ask section .worry_img .background-blur {
+  width: 119px;
+  height: 119px;
+  background: #fff;
+  filter: blur(40px);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.contact_button {
+  width: 82.71vw;
+  height: 99px;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #bb83cc 0%, #8f44a6 100%);
+  box-shadow: 0px 0px 30px #fff;
+}
+.contact_button a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 99px;
+  display: block;
+  letter-spacing: 0.1em;
+}
+article#introduce .inner > p {
+  margin-bottom: 43px;
+}
+article#introduce section {
+  display: flex;
+  justify-content: space-between;
+}
+article#introduce section .face_photo_name {
+  width: 40.186vw;
+  padding: 8px;
+}
+article#introduce section .face_photo_name img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+article#introduce section .face_photo_name h3 {
+  font-size: 18px;
+  text-align: center;
+}
+article#introduce section .introduction {
+  padding: 21px 8px 0 0;
+  width: 39.719vw;
+}
+article#introduce section .introduction dt {
+  font-size: 12px;
+  font-family: 'NotoSerifJP-Medium';
+  width: 18.691vw;
+  line-height: 30px;
+  background: linear-gradient(90deg, #1e3cb4 0%, #823c96 100%);
+  color: #fff;
+  text-align: center;
+  margin-bottom: 6px;
+}
+article#introduce section .introduction dd {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.article_separator {
+  width: 100vw;
+  height: 1px;
+  background-color: #e6e6e6;
+  margin: 0 auto;
+}
+article#price .base_price dt {
+  font-family: 'NotoSerifJP-Medium';
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  color: #1e3cb4;
+  margin-bottom: 20px;
+}
+article#price .base_price dt::before {
+  content: '<';
+}
+article#price .base_price dt::after {
+  content: '>';
+}
+article#price .base_price dd {
+  display: flex;
+  align-items: center;
+}
+article#price .base_price dd .min {
+  background: linear-gradient(90deg, #703582 0%, #bb83cc 100%);
+  width: 11.915vw;
+  height: 11.915vw;
+  line-height: 11.915vw;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  font-family: 'Lora-Regular', 'NotoSerifJP-Medium';
+  border-radius: 50%;
+  margin-right: 10px;
+}
+article#price .base_price dd .min .small {
+  font-size: 12px;
+}
+article#price .base_price dd .price {
+  font-family: 'Lora-Regular';
+  font-size: 35px;
+  letter-spacing: 0.1em;
+}
+article#price .base_price dd .price .small {
+  font-size: 24px;
+}
+article#price .base_price dd .price .tax_included {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  font-family: 'NotoSerifJP-Regular';
+}
+
+article#price .base_price dd .price {
+}
+article#price .base_price dd .tax_included {
 }
 
 /* TAB用 */
