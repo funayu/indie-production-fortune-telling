@@ -59,7 +59,7 @@ img {
 }
 
 .inner {
-  width: 82.71%;
+  width: 82.71vw;
   margin: 0 auto;
 }
 header {
@@ -257,7 +257,7 @@ article#about_service section .service_image {
   width: 56.775vw;
   height: 41.121vw;
 }
-article#about_service section img {
+article#about_service section .service_image img {
   object-fit: contain;
   width: 100%;
   height: 100%;
@@ -284,8 +284,6 @@ article#ask h2 {
   font-size: 25px;
   font-family: 'NotoSerifJP-Bold';
   text-align: center;
-  /* border-top: 1px solid #fff; */
-  /* border-bottom: 1px solid #fff; */
   width: 9em;
   padding: 10px 0;
   margin: 0 auto 60.5px;
@@ -524,6 +522,80 @@ article#price .inner > p {
 }
 article#price .inner > p:last-of-type {
   margin-bottom: 72px;
+}
+article#how_to_use {
+  background: #d7def8;
+}
+article#how_to_use section {
+  background: #fff;
+  margin: 0 3.971vw 20px;
+  padding: 40px 0;
+  position: relative;
+}
+article#how_to_use section::after {
+  content: '';
+  width: 2px;
+  height: 30px;
+  background-color: #1e3cb4;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 100%);
+}
+article#how_to_use section:last-of-type:after {
+  content: none;
+}
+article#how_to_use section:first-of-type {
+  border-radius: 40px 40px 0 0;
+}
+article#how_to_use section:last-of-type {
+  border-radius: 0 0 40px 40px;
+  margin-bottom: 80px;
+}
+article#how_to_use section h3 {
+  font-family: 'NotoSerifJP-SemiBold';
+  font-size: 18px;
+  color: #162d87;
+  padding-left: 4.906vw;
+  margin-bottom: 20px;
+}
+article#how_to_use section h3 span {
+  font-family: 'Lora-Medium';
+  font-size: 13px;
+  display: block;
+  color: #fff;
+  width: 18.925vw;
+  height: 34px;
+  background: linear-gradient(90deg, #162d87 0%, #6a83e5 100%);
+  line-height: 34px;
+  border-radius: 17px;
+  text-align: center;
+  margin-bottom: 10px;
+  transform: translateX(-4.906vw);
+}
+article#how_to_use section .action_image {
+  margin: 0 auto 5px;
+  width: 39.485vw;
+  height: 28.271vw;
+}
+article#how_to_use section .action_image img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+article#how_to_use section p {
+  font-size: 14px;
+  padding-left: 4.906vw;
+  margin-bottom: 1em;
+}
+article#how_to_use section p a {
+  color: #162d87;
+}
+article#how_to_use section p:last-of-type {
+  margin-bottom: 0;
+}
+article#how_to_use section p.small {
+  font-size: 12px;
 }
 
 /* TAB用 */
