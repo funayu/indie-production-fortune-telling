@@ -423,12 +423,16 @@ article#introduce section .introduction dd {
   background-color: #e6e6e6;
   margin: 0 auto;
 }
+article#price .base_price {
+  margin-bottom: 15px;
+}
 article#price .base_price dt {
   font-family: 'NotoSerifJP-Medium';
   font-size: 18px;
   letter-spacing: 0.1em;
   color: #1e3cb4;
   margin-bottom: 20px;
+  text-align: center;
 }
 article#price .base_price dt::before {
   content: '<';
@@ -439,6 +443,7 @@ article#price .base_price dt::after {
 article#price .base_price dd {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 article#price .base_price dd .min {
   background: linear-gradient(90deg, #703582 0%, #bb83cc 100%);
@@ -468,10 +473,57 @@ article#price .base_price dd .price .tax_included {
   letter-spacing: 0.05em;
   font-family: 'NotoSerifJP-Regular';
 }
-
-article#price .base_price dd .price {
+article#price .plus {
+  font-family: 'Lora-Regular';
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 8px;
 }
-article#price .base_price dd .tax_included {
+article#price .option_price {
+  margin-bottom: 20px;
+}
+article#price .option_price > dt {
+  font-family: 'NotoSerifJP-Medium';
+  font-size: 12px;
+  color: #fff;
+  width: 27.803vw;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #162d87 0%, #6a83e5 100%);
+  line-height: 36px;
+  text-align: center;
+  margin: 0 auto;
+  transform: translateY(25%);
+}
+article#price .option_price > dd {
+  background: #edf0fc;
+  padding: 30px;
+  width: 72.429vw;
+  margin: 0 auto;
+}
+article#price .option_price dd dl {
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+}
+article#price .option_price dd dl:first-of-type {
+  padding-bottom: 14.5px;
+  border-bottom: 1px solid #cecece;
+}
+article#price .option_price dd dl:last-of-type {
+  padding-top: 14.5px;
+}
+article#price .option_price dd dl dt {
+  width: 41%;
+}
+article#price .inner > p {
+  font-family: 'NotoSerifJP-Light';
+  font-size: 11px;
+  width: 72.429vw;
+  margin: 0 auto 8px;
+}
+article#price .inner > p:last-of-type {
+  margin-bottom: 72px;
 }
 
 /* TAB用 */
