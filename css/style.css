@@ -382,6 +382,15 @@ article#ask section .worry_img .background-blur {
 article#introduce .inner > p {
   margin-bottom: 43px;
 }
+.swiper {
+  width: 82.7vw;
+}
+.swiper-wrapper {
+  width: 100%;
+}
+.swiper-slide {
+  width: 100%;
+}
 article#introduce section {
   display: flex;
   justify-content: space-between;

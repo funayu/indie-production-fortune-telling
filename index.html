@@ -13,6 +13,7 @@
     <title>Fortune Adviser（フォーチュン アドバイザー）| 当たると評判のオンライン占いサービス</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/script.js"></script>
   </head>
@@ -170,18 +171,102 @@
           <p>
             当サービスには常時100名以上の占い師が所属しております。こちらでは、特に人気の占い師についてご紹介させていただきます。
           </p>
-          <section>
-            <div class="face_photo_name">
-              <div><img src="images/introduce/people_1@468.jpg" alt="山田　花子の顔写真" /></div>
-              <h3>山田　花子</h3>
+          <!-- スライダーのコンテナ -->
+          <div class="swiper">
+            <!-- 必要に応じたwrapper -->
+            <div class="swiper-wrapper">
+              <!-- スライド -->
+              <!-- TODO:自己紹介文修正する -->
+              <section class="swiper-slide">
+                <div class="face_photo_name">
+                  <div><img src="images/introduce/people_1@468.jpg" alt="山田　花子の顔写真" /></div>
+                  <h3>トミー宮田</h3>
+                </div>
+                <dl class="introduction">
+                  <dt>占術</dt>
+                  <dd>西洋占星術、手相、タロットカード</dd>
+                  <dt>得意分野</dt>
+                  <dd>恋愛、人生相談全般</dd>
+                </dl>
+              </section>
+              <section class="swiper-slide">
+                <div class="face_photo_name">
+                  <div><img src="images/introduce/people_2@468.jpg" alt="ジャスミンの顔写真" /></div>
+                  <h3>ジャスミン</h3>
+                </div>
+                <dl class="introduction">
+                  <dt>占術</dt>
+                  <dd>オラクルカード、西洋占星術、ルーン</dd>
+                  <dt>得意分野</dt>
+                  <dd>強み発見、仕事</dd>
+                </dl>
+              </section>
+              <section class="swiper-slide">
+                <div class="face_photo_name">
+                  <div><img src="images/introduce/people_3@468.jpg" alt="松原 修平の顔写真" /></div>
+                  <h3>松原 修平</h3>
+                </div>
+                <dl class="introduction">
+                  <dt>占術</dt>
+                  <dd>四柱推命、九星気学、易</dd>
+                  <dt>得意分野</dt>
+                  <dd>家族、夫婦、仕事</dd>
+                </dl>
+              </section>
+              <section class="swiper-slide">
+                <div class="face_photo_name">
+                  <div><img src="images/introduce/people_4@468.jpg" alt="星乃 光の顔写真" /></div>
+                  <h3>星乃 光</h3>
+                </div>
+                <dl class="introduction">
+                  <dt>占術</dt>
+                  <dd>四柱推命、九星気学、易</dd>
+                  <dt>得意分野</dt>
+                  <dd>家族、夫婦、仕事</dd>
+                </dl>
+              </section>
+              <section class="swiper-slide">
+                <div class="face_photo_name">
+                  <div><img src="images/introduce/people_5@468.jpg" alt="綾子の顔写真" /></div>
+                  <h3>綾子</h3>
+                </div>
+                <dl class="introduction">
+                  <dt>占術</dt>
+                  <dd>四柱推命、九星気学、易</dd>
+                  <dt>得意分野</dt>
+                  <dd>家族、夫婦、仕事</dd>
+                </dl>
+              </section>
+              <section class="swiper-slide">
+                <div class="face_photo_name">
+                  <div><img src="images/introduce/people_6@468.jpg" alt="斎藤 拓海の顔写真" /></div>
+                  <h3>斎藤 拓海</h3>
+                </div>
+                <dl class="introduction">
+                  <dt>占術</dt>
+                  <dd>四柱推命、九星気学、易</dd>
+                  <dt>得意分野</dt>
+                  <dd>家族、夫婦、仕事</dd>
+                </dl>
+              </section>
+              <section class="swiper-slide">
+                <div class="face_photo_name">
+                  <div><img src="images/introduce/people_7@468.jpg" alt="の顔写真" /></div>
+                  <h3>クリスタル紗矢華</h3>
+                </div>
+                <dl class="introduction">
+                  <dt>占術</dt>
+                  <dd>四柱推命、九星気学、易</dd>
+                  <dt>得意分野</dt>
+                  <dd>家族、夫婦、仕事</dd>
+                </dl>
+              </section>
             </div>
-            <dl class="introduction">
-              <dt>占術</dt>
-              <dd>西洋占星術、手相、タロットカード</dd>
-              <dt>得意分野</dt>
-              <dd>恋愛、人生相談全般</dd>
-            </dl>
-          </section>
+            <!-- 必要に応じてナビボタン -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <!-- .swiperの終了タグ -->
         </div>
         <!-- .innerの終了タグ -->
       </article>
@@ -319,5 +404,23 @@
         <small>&copy; 2022 Fortune Adviser. All Rights Reserved.</small>
       </div>
     </footer>
+    <script src="js/swiper-bundle.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+        // ナビボタンが必要なら追加
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 1,
+        breakpoints: {
+          // 980px以上の場合
+          960: {
+            slidesPerView: 2,
+          },
+        },
+      })
+    </script>
   </body>
 </html>
