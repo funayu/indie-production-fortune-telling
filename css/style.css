@@ -656,7 +656,7 @@ footer small {
   font-size: 10px;
 }
 
-/* 鑑定申し込みページ */
+/* 鑑定申し込みページ(入力、確認、完了共通) */
 #contact_main {
   position: relative;
 }
@@ -702,19 +702,19 @@ footer small {
   text-align: center;
   position: relative;
 }
-#progress .inner > div > span::after {
+#progress .inner > div > span::before {
   content: '';
   width: 17vw;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.3);
   position: absolute;
   top: 50%;
-  left: 5em;
+  right: 5em;
 }
-#progress .inner > div.step > span::after {
+#progress .inner > div.step > span::before {
   background-color: rgba(255, 255, 255, 1);
 }
-#progress .inner > div:last-of-type > span::after {
+#progress .inner > div:first-of-type > span::before {
   content: none;
 }
 .contact form {
@@ -779,6 +779,7 @@ footer small {
 .contact form .checkbox_outer {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 4px;
 }
 /* デフォルトのチェックボックスは非表示にする */
 .contact form input[type='checkbox'] {
@@ -794,6 +795,7 @@ footer small {
   user-select: none;
 
   width: 50%;
+  font-size: 14px
 }
 /* □ */
 .contact form .check_mark {
@@ -802,7 +804,7 @@ footer small {
   left: 0;
   height: 22px; /* 大きさ */
   width: 22px; /* 大きさ */
-  border: solid 2px #d4dae2; /* 線 */
+  border: solid 1px #707070; /* 線 */
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -830,6 +832,109 @@ footer small {
 }
 /* チェックボックスのカスタマイズ ここまで */
 
+.contact form section > p.extra_small {
+  font-size: 10px;
+  font-family: 'NotoSerifJP-Regular';
+  color: #1a1918;
+}
+.contact form section h4{
+  font-family: 'NotoSerifJP-Bold';  
+  font-size: 15px;
+  margin-bottom: 1em;
+}
+.contact form .select_outer{
+  padding-top: 7px;
+  margin-bottom: 40px;
+}
+.contact form .select_outer:last-of-type{
+  margin-bottom: 82px;
+}
+.contact form select{
+  padding:8px 1em 8px 0.5em;
+  font-family: 'NotoSerifJP-Regular';
+  font-size: 14px;
+  border:1px solid #707070;
+  border-radius: 5px;
+}
+.contact form select+span{
+  font-size: 14px;
+}
+.contact form input[type="submit"]{
+  margin: 0;
+  padding:0;
+  border: 4px solid #1e3cb4;
+  width: 100%;
+  height: 99px;
+  border-radius: 40px;
+  font-family: 'NotoSerifJP-SemiBold';
+  font-size: 18px;
+  background: linear-gradient(90deg, #1e3cb4 0%, #823C96 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+}
+/*お申し込みフォーム（確認画面）*/
+.contact form section > h3{
+  margin-bottom: 40px;
+}
+.contact_confirm form .form_separater{
+  margin-bottom: 60px;
+}
+.contact_confirm form section dl > dd {
+  margin-bottom: 26px;
+  padding:1em 0;
+  font-size: 14px;
+}
+.contact_confirm form section dl > dd.margin_none {
+    margin-bottom: 0;
+}
+.contact_confirm form > section > section {
+    margin-bottom: 40px;
+}
+.contact_confirm form > section{
+    margin-bottom: 60px;
+}
+.contact_confirm form input[type="submit"]{
+  margin-bottom: 60px;
+}
+.contact_confirm form input[type="button"]{
+  margin: 0;
+  padding:0;
+  border: none;
+  font-family: 'NotoSerifJP-Regular';
+  font-size: 18px;
+  cursor: pointer;
+  background-color: transparent;
+  letter-spacing: 0.1em;
+  width: 100%;
+  padding-left: 15vw;
+  position: relative;
+}
+.contact_confirm form .back_button{
+  position: relative;
+  text-align: left;
+  text-align: left;
+  display: inline-block;
+  position: relative;
+}
+.contact_confirm form .back_button::before{
+  content: "←";
+  position:absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 12.616vw;
+  height: 12.616vw;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #1e3cb4 0%, #823C96 100%);
+  color: #fff;
+  line-height: 12.616vw;
+  text-align: center;
+  font-family: 'NotoSerifJP-Bold';
+  font-size: 18px;
+}
+
 /* TAB用 */
 @media screen and (min-width: 600px) {
 }
@@ -838,6 +943,7 @@ footer small {
 @media screen and (min-width: 960px) {
   .topPage #top_main {
     background-color: #000;
+
   }
   .topPage #top_main .top_main_movie {
     height: 100%;

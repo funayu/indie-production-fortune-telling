@@ -5,9 +5,10 @@ mb_internal_encoding("UTF-8");
 // データ格納
 $to = $_POST["email"];//メール送信先の設定
 $subject = "【Fortune Adviser】鑑定のお申し込みありがとうございます。";//メールの件名
-$header = "From: gyusopenu@sofia.re";//送信元アドレス
+$header = "From: info@tdp.com";//送信元アドレス
 $header .= "\n";//改行
 $header .= "Bcc: tiro349@moimoi.re";//確認メール管理者受信用
+//$header .= "Bcc: tdp@sairafactory.com";//確認メール管理者受信用
 $message = "この度はFortune Adviserの占い鑑定をお申し込みいただき誠にありがとうございます。" . "\n" . "お客様からのお申し込みを下記内容にて受け付けました。" . "\n" .
 "\n" .
 "お名前：" . $_POST["name"] . "\n" .
@@ -29,8 +30,7 @@ $message = "この度はFortune Adviserの占い鑑定をお申し込みいた�
 "※24時間以内にメールが届かない場合は、お手数ですがcontact@fortune-adviser.comまでご連絡ください。";
 
 // メール送信
-// TODO:送信テストするときはコメントアウトを外す
-// mb_send_mail($to, $subject, $message, $header);
+ mb_send_mail($to, $subject, $message, $header);
 
 ?>
 
@@ -51,46 +51,64 @@ $message = "この度はFortune Adviserの占い鑑定をお申し込みいた�
 </head>
 
 <body>
-  <div class="inner">
-    <header>
-      <h1>ロゴ</h1>
-      <nav>
-        <ul>
-          <li><a href="contact.html">Message</a></li>
-          <li><a href="contact.html">サービス概要</a></li>
-          <li><a href="contact.html">所属占い師の紹介</a></li>
-          <li><a href="contact.html">鑑定料金</a></li>
-          <li><a href="contact.html">サービスご利用方法</a></li>
-          <li><a href="contact.html">鑑定のお申込み→</a></li>
-        </ul>
-      </nav>
-      <div>（ハンバーガーメニュー）</div>
-    </header>
-  </div>
-  <div id="contact_main">
-    <h2>
-      <span>Contact</span>
-      鑑定のお申し込み
-    </h2>
-  </div>
-  <!-- #contact_mainの終了タグ -->
+  <header>
+    <h1>
+      <a href="index.html"><img src="images/logo/logo_white.svg" alt="Fortune Adviser" /></a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="index.html#message">Message</a></li>
+        <li><a href="index.html#about_service">サービス概要</a></li>
+        <li><a href="index.html#introduce">所属占い師の紹介</a></li>
+        <li><a href="index.html#price">鑑定料金</a></li>
+        <li><a href="index.html#how_to_use">サービスご利用方法</a></li>
+        <li><a href="#">鑑定のお申込み→</a></li>
+      </ul>
+    </nav>
+    <!-- ハンバーガーボタン押下時に表示されるレイヤー -->
+    <div class="coverlayer"></div>
+    <!-- .coverlayerの終了タグ -->
+    <!--ハンバーガーボタン-->
+    <div class="btnHamburger">
+      <span class="line line_01"></span>
+      <span class="line line_02"></span>
+      <span class="line line_03"></span>
+    </div>
+    <!-- .btnHamburgerの終了タグ  -->
+  </header>
+    <div id="contact_main">
+      <picture>
+        <source
+          media="(max-width: 599px)"
+          srcset="images/contact/top_main_sp@856.jpg 2x, images/contact/top_main_sp@1284.jpg 3x"
+        />
+        <source media="(max-width: 959px)" srcset="images/contact/top_main@1920.jpg 2x" />
+        <img src="images/contact/top_main@1920.jpg" alt="大きな月と木" />
+      </picture>
+      <h2>
+        <span>Contact</span>
+        鑑定のお申し込み
+      </h2>
+    </div>
+    <!-- #contact_mainの終了タグ -->
   <main>
-    <div class="inner">
-      <div id="progress">
-        <div>
+    <div id="progress">
+      <div class="inner">
+        <div class="step">
           <span>01</span>
           内容入力
         </div>
-        <div>
+        <div class="step">
           <span>02</span>
-          内容客員
+          内容確認
         </div>
-        <div>
+        <div class="step">
           <span>03</span>
           送信完了
         </div>
-      </div>
-      <!-- #progressの終了タグ -->
+    </div>
+    </div>
+    <!-- #progressの終了タグ -->
       <section>
         <h3>鑑定申し込みが完了しました</h3>
         <p>後ほどメールにて日程調整用のURLをご連絡させていただきます。</p>
@@ -98,7 +116,6 @@ $message = "この度はFortune Adviserの占い鑑定をお申し込みいた�
         <p>※24時間以内にメールが届かない場合は、お手数ですがcontact@fortune-adviser.comまでご連絡ください。</p>
       </section>
       <input type="button" value="TOPへ戻る" onClick="index.html">
-    </div>
   </main>
   <footer>
     <div class="inner">
