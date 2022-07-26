@@ -393,6 +393,7 @@ article#introduce section .face_photo_name {
 article#introduce section .face_photo_name img {
   width: 100%;
   margin-bottom: 5px;
+  border-radius: 50%;
 }
 article#introduce section .face_photo_name h3 {
   font-size: 18px;
@@ -795,7 +796,7 @@ footer small {
   user-select: none;
 
   width: 50%;
-  font-size: 14px
+  font-size: 14px;
 }
 /* □ */
 .contact form .check_mark {
@@ -837,70 +838,70 @@ footer small {
   font-family: 'NotoSerifJP-Regular';
   color: #1a1918;
 }
-.contact form section h4{
-  font-family: 'NotoSerifJP-Bold';  
+.contact form section h4 {
+  font-family: 'NotoSerifJP-Bold';
   font-size: 15px;
   margin-bottom: 1em;
 }
-.contact form .select_outer{
+.contact form .select_outer {
   padding-top: 7px;
   margin-bottom: 40px;
 }
-.contact form .select_outer:last-of-type{
+.contact form .select_outer:last-of-type {
   margin-bottom: 82px;
 }
-.contact form select{
-  padding:8px 1em 8px 0.5em;
+.contact form select {
+  padding: 8px 1em 8px 0.5em;
   font-family: 'NotoSerifJP-Regular';
   font-size: 14px;
-  border:1px solid #707070;
+  border: 1px solid #707070;
   border-radius: 5px;
 }
-.contact form select+span{
+.contact form select + span {
   font-size: 14px;
 }
-.contact form input[type="submit"]{
+.contact form input[type='submit'] {
   margin: 0;
-  padding:0;
+  padding: 0;
   border: 4px solid #1e3cb4;
   width: 100%;
   height: 99px;
   border-radius: 40px;
   font-family: 'NotoSerifJP-SemiBold';
   font-size: 18px;
-  background: linear-gradient(90deg, #1e3cb4 0%, #823C96 100%);
+  background: linear-gradient(90deg, #1e3cb4 0%, #823c96 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   cursor: pointer;
 }
 /*お申し込みフォーム（確認画面）*/
-.contact form section > h3{
+.contact form section > h3 {
   margin-bottom: 40px;
 }
-.contact_confirm form .form_separater{
+.contact_confirm form .form_separater {
   margin-bottom: 60px;
 }
 .contact_confirm form section dl > dd {
   margin-bottom: 26px;
-  padding:1em 0;
+  padding: 1em 0;
   font-size: 14px;
 }
 .contact_confirm form section dl > dd.margin_none {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 .contact_confirm form > section > section {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
-.contact_confirm form > section{
-    margin-bottom: 60px;
-}
-.contact_confirm form input[type="submit"]{
+.contact_confirm form > section {
   margin-bottom: 60px;
 }
-.contact_confirm form input[type="button"]{
+.contact_confirm form input[type='submit'] {
+  margin-bottom: 60px;
+}
+.contact_confirm form input[type='button'] {
   margin: 0;
-  padding:0;
+  padding: 0;
   border: none;
   font-family: 'NotoSerifJP-Regular';
   font-size: 18px;
@@ -911,23 +912,23 @@ footer small {
   padding-left: 15vw;
   position: relative;
 }
-.contact_confirm form .back_button{
+.contact_confirm form .back_button {
   position: relative;
   text-align: left;
   text-align: left;
   display: inline-block;
   position: relative;
 }
-.contact_confirm form .back_button::before{
-  content: "←";
-  position:absolute;
+.contact_confirm form .back_button::before {
+  content: '←';
+  position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
   width: 12.616vw;
   height: 12.616vw;
   border-radius: 50%;
-  background: linear-gradient(90deg, #1e3cb4 0%, #823C96 100%);
+  background: linear-gradient(90deg, #1e3cb4 0%, #823c96 100%);
   color: #fff;
   line-height: 12.616vw;
   text-align: center;
@@ -943,7 +944,6 @@ footer small {
 @media screen and (min-width: 960px) {
   .topPage #top_main {
     background-color: #000;
-
   }
   .topPage #top_main .top_main_movie {
     height: 100%;
