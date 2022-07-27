@@ -391,6 +391,7 @@ article#introduce .inner > p {
 }
 .swiper-wrapper {
   width: 100%;
+  transition-timing-function: linear;
 }
 .swiper-slide {
   width: 100%;
