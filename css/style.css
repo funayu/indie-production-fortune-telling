@@ -1032,6 +1032,43 @@ footer small {
     border-radius: 8px;
     box-shadow: 0px 0px 10px #f4edf6, 0px 0px 20px;
   }
+  .topPage #top_main {
+    height: 65.41vh;
+  }
+  .topPage #top_main h1 {
+    width: 36.69vw;
+    margin: 0 auto 30px;
+  }
+  .topPage #top_main p {
+    font-size: 20px;
+  }
+  .topPage #top_main .top_main_movie video {
+    width: calc(2156 / 1440 * 65.41vh);
+  }
+  article#message {
+    padding: 60px 0 106px;
+  }
+  article#message h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+  article#message .scroll {
+    margin-bottom: 24px;
+  }
+  article#message .scroll::after {
+    font-size: 12px;
+    left: 52%;
+  }
+  article#message section h3 {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  article#message section p {
+    width: 66.426vw;
+    margin: 0 auto 1em;
+    font-size: 21px;
+    letter-spacing: 0.06em;
+  }
 }
 
 /* PC用 */
