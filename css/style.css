@@ -991,6 +991,47 @@ footer small {
 
 /* TAB用 */
 @media screen and (min-width: 600px) {
+  header {
+    height: 54px;
+  }
+  header h1 {
+    width: 17.146vw;
+    margin: 14px 24px;
+  }
+  header .btnHamburger {
+    display: none;
+  }
+  header .coverlayer {
+    display: none;
+  }
+  header nav {
+    display: block;
+    width: 66.786vw;
+    margin-right: 24px;
+  }
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  header nav ul {
+    /* padding: 18.75px 0; */
+    line-height: 54px;
+  }
+  header nav ul li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Lora-Medium', 'NotoSerifJP-Medium';
+    font-size: 11px;
+  }
+  header nav ul li.contact a {
+    color: #552862;
+    background-color: #f4edf6;
+    line-height: 30px;
+    padding: 0 11px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #f4edf6, 0px 0px 20px;
+  }
 }
 
 /* PC用 */
