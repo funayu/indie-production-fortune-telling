@@ -50,7 +50,7 @@ $message = "この度はFortune Adviserの占い鑑定をお申し込みいた�
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<body>
+<body class="contact contact_complete">
   <header>
     <h1>
       <a href="index.html"><img src="images/logo/logo_white.svg" alt="Fortune Adviser" /></a>
@@ -76,21 +76,19 @@ $message = "この度はFortune Adviserの占い鑑定をお申し込みいた�
     </div>
     <!-- .btnHamburgerの終了タグ  -->
   </header>
-    <div id="contact_main">
-      <picture>
-        <source
-          media="(max-width: 599px)"
-          srcset="images/contact/top_main_sp@856.jpg 2x, images/contact/top_main_sp@1284.jpg 3x"
-        />
-        <source media="(max-width: 959px)" srcset="images/contact/top_main@1920.jpg 2x" />
-        <img src="images/contact/top_main@1920.jpg" alt="大きな月と木" />
-      </picture>
-      <h2>
-        <span>Contact</span>
-        鑑定のお申し込み
-      </h2>
-    </div>
-    <!-- #contact_mainの終了タグ -->
+  <div id="contact_main">
+    <picture>
+      <source media="(max-width: 599px)"
+        srcset="images/contact/top_main_sp@856.jpg 2x, images/contact/top_main_sp@1284.jpg 3x" />
+      <source media="(max-width: 959px)" srcset="images/contact/top_main@1920.jpg 2x" />
+      <img src="images/contact/top_main@1920.jpg" alt="大きな月と木" />
+    </picture>
+    <h2>
+      <span>Contact</span>
+      鑑定のお申し込み
+    </h2>
+  </div>
+  <!-- #contact_mainの終了タグ -->
   <main>
     <div id="progress">
       <div class="inner">
@@ -106,28 +104,33 @@ $message = "この度はFortune Adviserの占い鑑定をお申し込みいた�
           <span>03</span>
           送信完了
         </div>
-    </div>
+      </div>
     </div>
     <!-- #progressの終了タグ -->
+    <div class="inner">
       <section>
         <h3>鑑定申し込みが完了しました</h3>
-        <p>後ほどメールにて日程調整用のURLをご連絡させていただきます。</p>
-        <p>お手数ですが、そちらから鑑定の日程調整をお願いいたします。</p>
-        <p>※24時間以内にメールが届かない場合は、お手数ですがcontact@fortune-adviser.comまでご連絡ください。</p>
+        <p>後ほどメールにて日程調整用のURLをご連絡させていただきます。<br>お手数ですが、そちらから鑑定の日程調整をお願いいたします。</p>
+        <p class="small">※24時間以内にメールが届かない場合は、お手数ですがcontact@fortune-adviser.comまでご連絡ください。</p>
+        <div class="button"><a href="index.html">TOPへ戻る</a></div>
       </section>
-      <input type="button" value="TOPへ戻る" onClick="index.html">
+    </div>
   </main>
   <footer>
     <div class="inner">
-      <div>ロゴ</div>
+      <div>
+        <a href="index.html"><img src="images/logo/logo_white.svg" alt="Fortune Adviser" /></a>
+      </div>
       <p>contact@fortune-adviser.com</p>
       <ul>
-        <li><a href="#">Message</a></li>
-        <li><a href="#">サービス概要</a></li>
-        <li><a href="#">所属占い師の紹介</a></li>
-        <li><a href="#">鑑定料金</a></li>
-        <li><a href="#">サービスご利用方法</a></li>
-        <li><a href="#">鑑定のお申込み→</a></li>
+        <li><a href="index.html#message">Message</a></li>
+        <li><a href="index.html#about_service">サービス概要</a></li>
+        <li><a href="index.html#introduce">所属占い師の紹介</a></li>
+        <li><a href="index.html#price">鑑定料金</a></li>
+        <li><a href="index.html#how_to_use">サービスご利用方法</a></li>
+        <li class="contact">
+          <a href="contact.html">鑑定のお申込み<span>→</span></a>
+        </li>
       </ul>
       <small>&copy; 2022 Fortune Adviser. All Rights Reserved.</small>
     </div>

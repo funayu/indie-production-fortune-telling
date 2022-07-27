@@ -885,7 +885,7 @@ footer small {
   cursor: pointer;
 }
 /*お申し込みフォーム（確認画面）*/
-.contact form section > h3 {
+.contact_confirm form section > h3 {
   margin-bottom: 40px;
 }
 .contact_confirm form .form_separater {
@@ -943,6 +943,45 @@ footer small {
   text-align: center;
   font-family: 'NotoSerifJP-Bold';
   font-size: 18px;
+}
+/*お申し込みフォーム（完了画面）*/
+.contact_complete section {
+  padding: 61px 0 81px;
+}
+.contact_complete section h3 {
+  font-family: 'NotoSerifJP-Bold';
+  font-size: 21px;
+  color: #552862;
+  margin-bottom: 60px;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+.contact_complete section p {
+  line-height: 2;
+  margin-bottom: 40px;
+}
+.contact_complete section p.small {
+  font-size: 14px;
+}
+.contact_complete section .button {
+  border: 4px solid #1e3cb4;
+  width: 100%;
+  height: 99px;
+  line-height: 91px;
+  border-radius: 40px;
+  text-align: center;
+}
+.contact_complete section .button a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'NotoSerifJP-SemiBold';
+  font-size: 18px;
+  background: linear-gradient(90deg, #1e3cb4 0%, #823c96 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+  letter-spacing: 0.15em;
 }
 
 /* TAB用 */
