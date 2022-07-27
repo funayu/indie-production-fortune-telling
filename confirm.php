@@ -94,87 +94,93 @@ $birth_place2 = isset($_POST["birth_place2"])? $_POST["birth_place2"] : "";
       </div>
     </div>
     <!-- #progressの終了タグ -->
-    <div class="inner">
-      <form action="complete.php" method="post" id="contact">
-        <!-- input:hiddenの内容 -->
-        <input type="hidden" name="name" value="<?php echo htmlspecialchars($name,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="email" value="<?php echo htmlspecialchars($email,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="email_confirmation"
-          value="<?php echo htmlspecialchars($email_confirmation,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="tel" value="<?php echo htmlspecialchars($tel,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="consultation_content"
-          value="<?php echo htmlspecialchars($consultation_content,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="birth_year" value="<?php echo htmlspecialchars($birth_year,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="birth_month"
-          value="<?php echo htmlspecialchars($birth_month,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="birth_date" value="<?php echo htmlspecialchars($birth_date,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="birth_hour" value="<?php echo htmlspecialchars($birth_hour,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="birth_min" value="<?php echo htmlspecialchars($birth_min,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="birth_place"
-          value="<?php echo htmlspecialchars($birth_place,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="birth_year2"
-          value="<?php echo htmlspecialchars($birth_year2,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="birth_month2"
-          value="<?php echo htmlspecialchars($birth_month2,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="birth_date2"
-          value="<?php echo htmlspecialchars($birth_date2,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="birth_hour2"
-          value="<?php echo htmlspecialchars($birth_hour2,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="birth_min2" value="<?php echo htmlspecialchars($birth_min2,ENT_QUOTES,"UTF-8"); ?>">
-        <input type="hidden" name="birth_place2"
-          value="<?php echo htmlspecialchars($birth_place2,ENT_QUOTES,"UTF-8"); ?>">
-        <!-- input:hiddenの内容ここまで -->
-        <section>
-          <h3>入力内容をご確認ください。</h3>
-          <dl>
-            <dt class="required">お名前</dt>
-            <dd><?php echo htmlspecialchars($name,ENT_QUOTES,"UTF-8"); ?></dd>
-            <dt class="required">メールアドレス</dt>
-            <dd><?php echo htmlspecialchars($email,ENT_QUOTES,"UTF-8"); ?></dd>
-            <dt class="required">電話番号</dt>
-            <dd><?php echo htmlspecialchars($tel,ENT_QUOTES,"UTF-8"); ?></dd>
-          </dl>
-          <hr class="form_separater">
-          <dl>
-            <dt>相談したい内容（複数選択可能）</dt>
-            <dd><?php echo htmlspecialchars($consultation_content,ENT_QUOTES,"UTF-8"); ?></dd>
-          </dl>
+    <div class="contact_form">
+      <div class="inner">
+        <form action="complete.php" method="post" id="contact">
+          <!-- input:hiddenの内容 -->
+          <input type="hidden" name="name" value="<?php echo htmlspecialchars($name,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="email" value="<?php echo htmlspecialchars($email,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="email_confirmation"
+            value="<?php echo htmlspecialchars($email_confirmation,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="tel" value="<?php echo htmlspecialchars($tel,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="consultation_content"
+            value="<?php echo htmlspecialchars($consultation_content,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="birth_year"
+            value="<?php echo htmlspecialchars($birth_year,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="birth_month"
+            value="<?php echo htmlspecialchars($birth_month,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="birth_date"
+            value="<?php echo htmlspecialchars($birth_date,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="birth_hour"
+            value="<?php echo htmlspecialchars($birth_hour,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="birth_min" value="<?php echo htmlspecialchars($birth_min,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="birth_place"
+            value="<?php echo htmlspecialchars($birth_place,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="birth_year2"
+            value="<?php echo htmlspecialchars($birth_year2,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="birth_month2"
+            value="<?php echo htmlspecialchars($birth_month2,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="birth_date2"
+            value="<?php echo htmlspecialchars($birth_date2,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="birth_hour2"
+            value="<?php echo htmlspecialchars($birth_hour2,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="birth_min2"
+            value="<?php echo htmlspecialchars($birth_min2,ENT_QUOTES,"UTF-8"); ?>">
+          <input type="hidden" name="birth_place2"
+            value="<?php echo htmlspecialchars($birth_place2,ENT_QUOTES,"UTF-8"); ?>">
+          <!-- input:hiddenの内容ここまで -->
           <section>
-            <h4>◆自分の情報</h4>
+            <h3>入力内容をご確認ください。</h3>
             <dl>
-              <dt>生年月日</dt>
-              <dd>
-                <?php echo htmlspecialchars($birth_year,ENT_QUOTES,"UTF-8"); ?>年<?php echo htmlspecialchars($birth_month,ENT_QUOTES,"UTF-8"); ?>月<?php echo htmlspecialchars($birth_date,ENT_QUOTES,"UTF-8"); ?>日
-              </dd>
-              <dt>出生時刻</dt>
-              <dd>
-                <?php echo htmlspecialchars($birth_hour,ENT_QUOTES,"UTF-8"); ?>時<?php echo htmlspecialchars($birth_min,ENT_QUOTES,"UTF-8"); ?>分
-              </dd>
-              <dt>出生地</dt>
-              <dd class="margin_none"><?php echo htmlspecialchars($birth_place,ENT_QUOTES,"UTF-8"); ?></dd>
+              <dt class="required">お名前</dt>
+              <dd><?php echo htmlspecialchars($name,ENT_QUOTES,"UTF-8"); ?></dd>
+              <dt class="required">メールアドレス</dt>
+              <dd><?php echo htmlspecialchars($email,ENT_QUOTES,"UTF-8"); ?></dd>
+              <dt class="required">電話番号</dt>
+              <dd><?php echo htmlspecialchars($tel,ENT_QUOTES,"UTF-8"); ?></dd>
             </dl>
-          </section>
-          <section>
-            <h4>◆相手の情報（占いたい相手がいる場合）</h4>
+            <hr class="form_separater">
             <dl>
-              <dt>生年月日</dt>
-              <dd>
-                <?php echo htmlspecialchars($birth_year2,ENT_QUOTES,"UTF-8"); ?>年<?php echo htmlspecialchars($birth_month2,ENT_QUOTES,"UTF-8"); ?>月<?php echo htmlspecialchars($birth_date2,ENT_QUOTES,"UTF-8"); ?>日
-              </dd>
-              <dt>出生時刻</dt>
-              <dd>
-                <?php echo htmlspecialchars($birth_hour2,ENT_QUOTES,"UTF-8"); ?>時<?php echo htmlspecialchars($birth_min2,ENT_QUOTES,"UTF-8"); ?>分
-              </dd>
-              <dt>出生地</dt>
-              <dd><?php echo htmlspecialchars($birth_place2,ENT_QUOTES,"UTF-8"); ?></dd>
+              <dt>相談したい内容（複数選択可能）</dt>
+              <dd><?php echo htmlspecialchars($consultation_content,ENT_QUOTES,"UTF-8"); ?></dd>
             </dl>
+            <section>
+              <h4>◆自分の情報</h4>
+              <dl>
+                <dt>生年月日</dt>
+                <dd>
+                  <?php echo htmlspecialchars($birth_year,ENT_QUOTES,"UTF-8"); ?>年<?php echo htmlspecialchars($birth_month,ENT_QUOTES,"UTF-8"); ?>月<?php echo htmlspecialchars($birth_date,ENT_QUOTES,"UTF-8"); ?>日
+                </dd>
+                <dt>出生時刻</dt>
+                <dd>
+                  <?php echo htmlspecialchars($birth_hour,ENT_QUOTES,"UTF-8"); ?>時<?php echo htmlspecialchars($birth_min,ENT_QUOTES,"UTF-8"); ?>分
+                </dd>
+                <dt>出生地</dt>
+                <dd class="margin_none"><?php echo htmlspecialchars($birth_place,ENT_QUOTES,"UTF-8"); ?></dd>
+              </dl>
+            </section>
+            <section>
+              <h4>◆相手の情報（占いたい相手がいる場合）</h4>
+              <dl>
+                <dt>生年月日</dt>
+                <dd>
+                  <?php echo htmlspecialchars($birth_year2,ENT_QUOTES,"UTF-8"); ?>年<?php echo htmlspecialchars($birth_month2,ENT_QUOTES,"UTF-8"); ?>月<?php echo htmlspecialchars($birth_date2,ENT_QUOTES,"UTF-8"); ?>日
+                </dd>
+                <dt>出生時刻</dt>
+                <dd>
+                  <?php echo htmlspecialchars($birth_hour2,ENT_QUOTES,"UTF-8"); ?>時<?php echo htmlspecialchars($birth_min2,ENT_QUOTES,"UTF-8"); ?>分
+                </dd>
+                <dt>出生地</dt>
+                <dd><?php echo htmlspecialchars($birth_place2,ENT_QUOTES,"UTF-8"); ?></dd>
+              </dl>
+            </section>
           </section>
-        </section>
-        <input type="submit" value="入力した内容を送信する" />
-        <div class="back_button">
-          <input type="button" value="修正する" onClick="history.back()">
-        </div>
-      </form>
+          <input type="submit" value="入力した内容を送信する" />
+          <div class="back_button">
+            <input type="button" value="修正する" onClick="history.back()">
+          </div>
+        </form>
+      </div>
     </div>
   </main>
   <footer>

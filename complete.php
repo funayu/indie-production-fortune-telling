@@ -107,13 +107,15 @@ $message = "この度はFortune Adviserの占い鑑定をお申し込みいた�
       </div>
     </div>
     <!-- #progressの終了タグ -->
-    <div class="inner">
-      <section>
-        <h3>鑑定申し込みが完了しました</h3>
-        <p>後ほどメールにて日程調整用のURLをご連絡させていただきます。<br>お手数ですが、そちらから鑑定の日程調整をお願いいたします。</p>
-        <p class="small">※24時間以内にメールが届かない場合は、お手数ですがcontact@fortune-adviser.comまでご連絡ください。</p>
-        <div class="button"><a href="index.html">TOPへ戻る</a></div>
-      </section>
+    <div class="contact_form">
+      <div class="inner">
+        <section>
+          <h3>鑑定申し込みが完了しました</h3>
+          <p>後ほどメールにて日程調整用のURLをご連絡させていただきます。<br>お手数ですが、そちらから鑑定の日程調整をお願いいたします。</p>
+          <p class="small">※24時間以内にメールが届かない場合は、お手数ですがcontact@fortune-adviser.comまでご連絡ください。</p>
+          <div class="button"><a href="index.html">TOPへ戻る</a></div>
+        </section>
+      </div>
     </div>
   </main>
   <footer>

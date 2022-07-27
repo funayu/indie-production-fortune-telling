@@ -1314,6 +1314,9 @@ footer small {
     font-size: 16px;
     margin-bottom: 7px;
   }
+  .contact main {
+    background: #322a33;
+  }
   #progress {
     padding: 78.5px 0;
   }
@@ -1321,9 +1324,7 @@ footer small {
     width: 80.575vw;
   }
   .contact .contact_form {
-    background: #322a33;
-    /* 隙間ができるので調整 */
-    transform: translateY(-1px);
+    padding-bottom: 80px;
   }
   .contact .contact_form > .inner {
     background: #fff;
@@ -1345,6 +1346,28 @@ footer small {
     margin-bottom: 160px;
   }
   .contact form input[type='submit'] {
+    width: 42.446vw;
+    margin-left: 8.752vw;
+  }
+  /* お申し込みページ　確認画面 */
+  .contact_confirm form input[type='button'] {
+    padding-left: 8vw;
+    margin-left: 6vw;
+  }
+  .contact_confirm form .back_button::before {
+    width: 6.474vw;
+    height: 6.474vw;
+    line-height: 6.474vw;
+    left: 8.752vw;
+  }
+  /*お申し込みフォーム（完了画面）*/
+  .contact_complete section {
+    padding: 0;
+  }
+  .contact_complete section:last-of-type p {
+    margin-bottom: 86px;
+  }
+  .contact_complete section .button {
     width: 42.446vw;
     margin-left: 8.752vw;
   }
