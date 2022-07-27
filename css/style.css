@@ -1320,6 +1320,14 @@ footer small {
   #progress {
     padding: 78.5px 0;
   }
+  #progress .inner > div > span {
+    display: inline;
+  }
+  #progress .inner > div > span::before {
+    width: 18.824vw;
+    top: 50%;
+    right: 5vw;
+  }
   .contact .inner {
     width: 80.575vw;
   }
