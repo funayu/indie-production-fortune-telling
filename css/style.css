@@ -237,7 +237,7 @@ article#about_service p {
 }
 article#about_service section {
   background-color: #fff;
-  padding: 50px 55.5px;
+  padding: 50px 0;
   margin-bottom: 71px;
   position: relative;
 }
@@ -258,14 +258,18 @@ article#about_service section .number {
   color: transparent;
 }
 article#about_service section .service_image {
-  margin-bottom: 20px;
   width: 56.775vw;
   height: 41.121vw;
+  margin: 0 auto 20px;
 }
 article#about_service section .service_image img {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+article#about_service section .service_detail {
+  width: 57.242vw;
+  margin: 0 auto;
 }
 article#about_service section h3 {
   text-align: center;
@@ -1068,6 +1072,53 @@ footer small {
     margin: 0 auto 1em;
     font-size: 21px;
     letter-spacing: 0.06em;
+  }
+  article#about_service,
+  article#ask,
+  article#introduce,
+  article#price,
+  article#how_to_use {
+    padding: 106px 0;
+  }
+  article#about_service h2,
+  article#introduce h2,
+  article#price h2,
+  article#how_to_use h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  article#about_service h2 span,
+  article#introduce h2 span,
+  article#price h2 span,
+  article#how_to_use h2 span {
+    font-size: 16px;
+  }
+  article#about_service p {
+    margin-bottom: 103px;
+  }
+  article#about_service section {
+    display: flex;
+    justify-content: space-between;
+    padding: 77.6px 5.527vw;
+  }
+  article#about_service section .number {
+    font-size: 76px;
+  }
+  article#about_service section .service_image {
+    margin: 0;
+    width: 32.254vw;
+    height: 24.1vw;
+  }
+  article#about_service section .service_detail {
+    width: 33.693vw;
+    margin: 0;
+  }
+  article#about_service section h3 {
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+  article#about_service section ul li {
+    font-size: 14px;
   }
 }
 
