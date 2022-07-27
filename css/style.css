@@ -362,8 +362,8 @@ article#ask section .worry_img img {
   z-index: 1;
 }
 article#ask section .worry_img .background-blur {
-  width: 119px;
-  height: 119px;
+  width: 27.803vw;
+  height: 27.803vw;
   background: #fff;
   filter: blur(40px);
   position: absolute;
@@ -1119,6 +1119,75 @@ footer small {
   }
   article#about_service section ul li {
     font-size: 14px;
+  }
+  article#ask .inner {
+    padding: 0 13.549vw;
+  }
+  article#ask h2 {
+    font-size: 33px;
+    width: 10em;
+    padding-top: 22.5px;
+    padding-bottom: 22.5px;
+    margin-bottom: 71px;
+  }
+  article#ask section {
+    gap: 4.436vw;
+    margin-bottom: 58px;
+  }
+  article#ask section:nth-of-type(2) {
+    padding-left: 2.517vw;
+  }
+  article#ask section .worry_sentence {
+    width: 25.419vw;
+    height: 25.419vw;
+  }
+  article#ask section h3 {
+    font-size: 16px;
+  }
+  article#ask section .worry_img {
+    width: 20.383vw;
+    height: 20.383vw;
+  }
+  article#ask section .worry_img .background-blur {
+    width: 19.064vw;
+    height: 19.064vw;
+  }
+  .contact_button {
+    width: 100%;
+  }
+  article#introduce .inner > p {
+    margin-bottom: 57px;
+  }
+  article#introduce section .face_photo_name {
+    width: 25.299vw;
+    padding: 10px;
+  }
+  article#introduce section .face_photo_name img {
+    margin-bottom: 10px;
+  }
+  article#introduce section .face_photo_name h3 {
+    font-size: 20px;
+  }
+  article#introduce section .introduction {
+    padding: 28px 0 0;
+    width: 25.419vw;
+  }
+  .swiper {
+    width: 64.748vw;
+  }
+  article#introduce section {
+    justify-content: center;
+    gap: 2.038vw;
+  }
+  article#introduce section .introduction dt {
+    font-size: 15px;
+    width: 11.75vw;
+    line-height: 40px;
+    margin-bottom: 6px;
+  }
+  article#introduce section .introduction dd {
+    font-size: 16px;
+    margin-bottom: 1em;
   }
 }
 
