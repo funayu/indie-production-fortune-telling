@@ -49,7 +49,7 @@ $birth_place2 = isset($_POST["birth_place2"])? $_POST["birth_place2"] : "";
         <li><a href="index.html#introduce">所属占い師の紹介</a></li>
         <li><a href="index.html#price">鑑定料金</a></li>
         <li><a href="index.html#how_to_use">サービスご利用方法</a></li>
-        <li><a href="#">鑑定のお申込み→</a></li>
+        <li class="contact"><a href="#">鑑定のお申込み</a></li>
       </ul>
     </nav>
     <!-- ハンバーガーボタン押下時に表示されるレイヤー -->

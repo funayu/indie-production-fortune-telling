@@ -995,6 +995,10 @@ footer small {
 
 /* TAB用 */
 @media screen and (min-width: 600px) {
+  .inner {
+    width: 79.976vw;
+    margin: 0 auto;
+  }
   header {
     height: 54px;
   }
@@ -1299,6 +1303,50 @@ footer small {
   }
   footer small {
     font-size: 12px;
+  }
+  /* お申し込みページ　共通 */
+  #contact_main h2 {
+    left: 9.712vw;
+    font-size: 32px;
+    letter-spacing: 0.1em;
+  }
+  #contact_main h2 span {
+    font-size: 16px;
+    margin-bottom: 7px;
+  }
+  #progress {
+    padding: 78.5px 0;
+  }
+  .contact .inner {
+    width: 80.575vw;
+  }
+  .contact .contact_form {
+    background: #322a33;
+    /* 隙間ができるので調整 */
+    transform: translateY(-1px);
+  }
+  .contact .contact_form > .inner {
+    background: #fff;
+    padding: 86px 86px 80px;
+  }
+  .contact form {
+    padding: 0;
+  }
+  .contact form section:first-of-type > h3 {
+    display: inline-block;
+  }
+  .contact form section:first-of-type > p {
+    display: inline-block;
+  }
+  .contact form section dl > dd {
+    margin-bottom: 40px;
+  }
+  .contact form section:last-of-type {
+    margin-bottom: 160px;
+  }
+  .contact form input[type='submit'] {
+    width: 42.446vw;
+    margin-left: 8.752vw;
   }
 }
 
