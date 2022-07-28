@@ -201,6 +201,7 @@ article#message section p {
   letter-spacing: 0.05em;
   margin-bottom: 1em;
   text-shadow: 0px 0px 15px #fff, 0px 0px 30px #fff;
+  text-align: justify;
 }
 article#about_service,
 article#ask,
@@ -1109,6 +1110,7 @@ footer small {
     margin: 0;
     width: 32.254vw;
     height: 24.1vw;
+    padding: 11px;
   }
   article#about_service section .service_detail {
     width: 33.693vw;
@@ -1380,6 +1382,12 @@ footer small {
 
 /* PC用 */
 @media screen and (min-width: 960px) {
+  .br_sp {
+    display: none;
+  }
+  .inner {
+    width: 960px;
+  }
   header h1 {
     width: 143px;
   }
@@ -1388,8 +1396,7 @@ footer small {
     margin-right: 60px;
   }
   .topPage #top_main {
-    height: auto;
-    max-height: 1440px;
+    height: 100%;
   }
   .topPage #top_main .top_main_movie {
     height: 100%;
@@ -1399,5 +1406,69 @@ footer small {
     width: auto;
     /* 横いっぱい */
     height: calc(1440 / 2156 * 100vw);
+  }
+  .topPage #top_main h1 {
+    width: 306px;
+  }
+  article#message section p {
+    width: 797px;
+  }
+  article#about_service section {
+    padding: 66.6px 81.4px;
+  }
+  article#about_service section .service_image {
+    width: 311px;
+    height: 233px;
+    padding: 13px;
+  }
+  article#about_service section .service_detail {
+    width: 376px;
+  }
+  article#ask .inner {
+    padding: 0;
+  }
+  article#ask h2 {
+    width: 17em;
+    margin-bottom: 80px;
+  }
+  article#ask h2::before,
+  article#ask h2::after {
+    width: 20em;
+  }
+  article#ask .worry_content {
+    display: flex;
+    width: 924px;
+    justify-content: space-between;
+    margin-bottom: 85px;
+  }
+  article#ask section .worry_sentence {
+    width: 212px;
+    height: 212px;
+  }
+  article#ask section .worry_img {
+    width: 170px;
+    height: 170px;
+  }
+  article#ask section .worry_img .background-blur {
+    width: 159px;
+    height: 159px;
+  }
+  article#ask section {
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 0;
+  }
+  article#ask section:nth-of-type(odd) {
+    flex-direction: column-reverse;
+  }
+  article#ask section:nth-of-type(2) {
+    padding-left: 0;
+  }
+  article#ask section:last-of-type {
+    margin-bottom: 0;
+  }
+  .contact_button {
+    width: 440px;
+    margin: 0 auto;
   }
 }
