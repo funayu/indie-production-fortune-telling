@@ -48,6 +48,7 @@ $message = "この度はFortune Adviserの占い鑑定をお申し込みいた�
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/script.js" defer></script>
 </head>
 
 <body class="contact contact_complete">
