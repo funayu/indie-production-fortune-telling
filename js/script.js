@@ -26,3 +26,14 @@ if (document.getElementsByClassName('swiper').length) {
     },
   })
 }
+
+$(document).ready(function () {
+  // ハンバーガーボタンクリック時の処理
+  $('.btnHamburger').on('click', function () {
+    $('.btnHamburger, .coverlayer, nav').toggleClass('is-active')
+  })
+  // coverlayer上のナビゲーションボタンクリック時処理
+  $('nav ul li a').on('click', function () {
+    $('.btnHamburger, .coverlayer, nav').removeClass('is-active')
+  })
+})
