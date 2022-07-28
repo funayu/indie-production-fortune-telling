@@ -1004,7 +1004,7 @@ footer small {
   }
   header h1 {
     width: 17.146vw;
-    margin: 14px 24px;
+    margin: 7px 24px;
   }
   header .btnHamburger {
     display: none;
@@ -1020,10 +1020,7 @@ footer small {
   header nav ul {
     display: flex;
     justify-content: space-between;
-  }
-  header nav ul {
-    /* padding: 18.75px 0; */
-    line-height: 54px;
+    padding: 12px;
   }
   header nav ul li a {
     display: inline-block;
@@ -1035,13 +1032,13 @@ footer small {
   header nav ul li.contact a {
     color: #552862;
     background-color: #f4edf6;
-    line-height: 30px;
-    padding: 0 11px;
+    padding: 6.75px 11px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px #f4edf6, 0px 0px 20px;
   }
   .topPage #top_main {
     height: 65.41vh;
+    background: #000;
   }
   .topPage #top_main h1 {
     width: 36.69vw;
@@ -1383,18 +1380,24 @@ footer small {
 
 /* PC用 */
 @media screen and (min-width: 960px) {
+  header h1 {
+    width: 143px;
+  }
+  header nav {
+    width: 557px;
+    margin-right: 60px;
+  }
   .topPage #top_main {
-    background-color: #000;
+    height: auto;
+    max-height: 1440px;
   }
   .topPage #top_main .top_main_movie {
     height: 100%;
     align-items: center;
   }
   .topPage #top_main .top_main_movie video {
-    /* 縦いっぱい sp, tablet */
-    /* width: calc(2156 / 1440 * 84.806vh); */
     width: auto;
-    /* 横いっぱい labtop */
+    /* 横いっぱい */
     height: calc(1440 / 2156 * 100vw);
   }
 }
