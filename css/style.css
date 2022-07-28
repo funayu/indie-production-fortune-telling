@@ -196,9 +196,12 @@ header nav ul li.contact span {
   justify-content: center;
   overflow: hidden;
 }
+.topPage #top_main .top_main_movie .top_main_pc {
+  display: none;
+}
 .topPage #top_main .top_main_movie video {
   /* 縦いっぱい sp, tablet */
-  width: calc(2156 / 1440 * 84.806vh);
+  width: calc(1616 / 1080 * 84.806vh);
   filter: brightness(55%);
 }
 .topPage #top_main .inner {
@@ -1155,6 +1158,12 @@ footer small {
   }
   .topPage #top_main p {
     font-size: 20px;
+  }
+  .topPage #top_main .top_main_movie .top_main_sp {
+    display: none;
+  }
+  .topPage #top_main .top_main_movie .top_main_pc {
+    display: block;
   }
   .topPage #top_main .top_main_movie video {
     width: calc(2156 / 1440 * 65.41vh);
