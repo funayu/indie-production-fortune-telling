@@ -1,7 +1,7 @@
 <?php
 $name = isset($_POST["name"])? $_POST["name"] : "";
 $email = isset($_POST["email"])? $_POST["email"] : "";
-$email_confirmation = isset($_POST["email_confirmation"])? $_POST["email_confirmation"] : "";
+// $email_confirmation = isset($_POST["email_confirmation"])? $_POST["email_confirmation"] : "";
 $tel = isset($_POST["tel"])? $_POST["tel"] : "";
 $consultation_content = isset($_POST["consultation_content"])&&is_array($_POST["consultation_content"])? implode("、", $_POST["consultation_content"]): "";
 $birth_year = isset($_POST["birth_year"])? $_POST["birth_year"] : "";
@@ -101,8 +101,6 @@ $birth_place2 = isset($_POST["birth_place2"])? $_POST["birth_place2"] : "";
           <!-- input:hiddenの内容 -->
           <input type="hidden" name="name" value="<?php echo htmlspecialchars($name,ENT_QUOTES,"UTF-8"); ?>">
           <input type="hidden" name="email" value="<?php echo htmlspecialchars($email,ENT_QUOTES,"UTF-8"); ?>">
-          <input type="hidden" name="email_confirmation"
-            value="<?php echo htmlspecialchars($email_confirmation,ENT_QUOTES,"UTF-8"); ?>">
           <input type="hidden" name="tel" value="<?php echo htmlspecialchars($tel,ENT_QUOTES,"UTF-8"); ?>">
           <input type="hidden" name="consultation_content"
             value="<?php echo htmlspecialchars($consultation_content,ENT_QUOTES,"UTF-8"); ?>">
@@ -203,6 +201,10 @@ $birth_place2 = isset($_POST["birth_place2"])? $_POST["birth_place2"] : "";
       <small>&copy; 2022 Fortune Adviser. All Rights Reserved.</small>
     </div>
   </footer>
+  <div id="totop">
+    <a href="#">↑</a>
+  </div>
+  <!--#totopの終了タグ-->
 </body>
 
 </html>

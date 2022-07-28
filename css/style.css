@@ -185,9 +185,6 @@ header nav ul li.contact span {
   text-align: center;
   margin-left: 0.3em;
 }
-header nav ul li a:hover {
-  opacity: 0.7;
-}
 
 .topPage #top_main {
   width: 100%;
@@ -222,7 +219,7 @@ header nav ul li a:hover {
 
 article#message {
   background: linear-gradient(#6a387a 0%, #eadcee 100%);
-  padding: 40px 0 80px;
+  padding: 30px 0 80px;
 }
 article#message h2 {
   font-size: 24px;
@@ -755,6 +752,25 @@ footer ul li a {
 footer small {
   font-size: 10px;
 }
+/* 上に戻るボタン */
+#totop {
+  position: fixed;
+  color: #000;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 5px;
+  text-align: center;
+  border-radius: 50%;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  box-shadow: 0px 0px 20px #eadcee;
+}
+#totop a {
+  text-decoration: none;
+}
 
 /* 鑑定申し込みページ(入力、確認、完了共通) */
 #contact_main {
@@ -1124,7 +1140,7 @@ footer small {
     background-color: #f4edf6;
     padding: 6.75px 11px;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px #f4edf6, 0px 0px 20px;
+    box-shadow: 0px 0px 10px #f4edf6, 0px 0px 20px #f4edf6;
   }
   header nav ul li.contact span {
     display: none;
@@ -1489,6 +1505,9 @@ footer small {
   header nav {
     width: 557px;
     margin-right: 60px;
+  }
+  header nav ul li a:hover {
+    opacity: 0.7;
   }
   .topPage #top_main {
     height: 100%;

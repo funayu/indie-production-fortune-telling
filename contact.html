@@ -82,23 +82,24 @@
               <p>（<span class="required">※</span>は入力必須です）</p>
               <dl>
                 <dt class="required">お名前</dt>
-                <dd><input type="text" size="30" name="name" id="name" placeholder="例）山田太郎" /></dd>
+                <dd><input type="text" size="30" name="name" id="name" placeholder="例）山田太郎" required /></dd>
                 <dt class="required">メールアドレス</dt>
                 <dd>
-                  <input type="email" size="30" name="email" id="email" placeholder="例）sample@fortune-adviser.com" />
+                  <input type="email" size="30" name="email" id="email" placeholder="例）sample@example.com" required />
                 </dd>
-                <dt class="required">メールアドレス（確認）</dt>
+                <!-- <dt class="required">メールアドレス（確認）</dt>
                 <dd>
                   <input
                     type="email"
                     size="30"
                     name="email_confirmation"
                     id="email_confirmation"
-                    placeholder="例）sample@fortune-adviser.com"
+                    placeholder="例）sample@example.com"
+                    required
                   />
-                </dd>
+                </dd> -->
                 <dt class="required">電話番号</dt>
-                <dd><input type="tel" size="30" name="tel" id="tel" placeholder="例）000-1111-2222" /></dd>
+                <dd><input type="tel" size="30" name="tel" id="tel" placeholder="例）000-1111-2222" required /></dd>
               </dl>
             </section>
             <section>
@@ -806,5 +807,9 @@
         <small>&copy; 2022 Fortune Adviser. All Rights Reserved.</small>
       </div>
     </footer>
+    <div id="totop">
+      <a href="#">↑</a>
+    </div>
+    <!--#totopの終了タグ-->
   </body>
 </html>
