@@ -1,35 +1,36 @@
 <?php
-mb_language("japanese");
-mb_internal_encoding("UTF-8");
+// メール送信機能を無効化
+// mb_language("japanese");
+// mb_internal_encoding("UTF-8");
 
-// データ格納
-$to = $_POST["email"];//メール送信先の設定
-$subject = "【Fortune Adviser】鑑定のお申し込みありがとうございます。";//メールの件名
-$header = "From: info@fortunetelling.com";//送信元アドレス（ダミー）
-$header .= "\n";//改行
-$header .= "Bcc: dummy@test.com";//確認メール管理者受信用（ダミー）
-$message = "この度はFortune Adviserの占い鑑定をお申し込みいただき誠にありがとうございます。" . "\n" . "お客様からのお申し込みを下記内容にて受け付けました。" . "\n" .
-"\n" .
-"お名前：" . $_POST["name"] . "\n" .
-"メールアドレス：" . $_POST["email"] . "\n" .
-"電話番号：" . $_POST["tel"] . "\n" .
-"相談したい内容（複数選択可能）：" . $_POST["consultation_content"] . "\n" .
-"◆自分の情報" . "\n" .
-"生年月日：" . $_POST["birth_year"] . "年" . $_POST["birth_month"] . "月" .$_POST["birth_date"] . "日" . "\n" .
-"出生時刻：" . $_POST["birth_hour"] . "時" . $_POST["birth_min"] . "分" . "\n" .
-"出生地：" . $_POST["birth_place"] . "\n" .
-"◆相手の情報（占いたい相手がいる場合）" . "\n" .
-"生年月日：" . $_POST["birth_year2"] . "年" . $_POST["birth_month2"] . "月" .$_POST["birth_date2"] . "日" . "\n" .
-"出生時刻：" . $_POST["birth_hour2"] . "時" . $_POST["birth_min2"] . "分" . "\n" .
-"出生地：" . $_POST["birth_place2"] . "\n" .
-"\n" .
-"後ほど別メールにて日程調整用のURLをご連絡させていただきます。"."\n" .
-"お手数ですが、そちらから鑑定の日程調整をお願いいたします。"."\n" .
-"\n" .
-"※24時間以内にメールが届かない場合は、お手数ですがcontact@fortune-adviser.comまでご連絡ください。";
+// // データ格納
+// $to = $_POST["email"];//メール送信先の設定
+// $subject = "【Fortune Adviser】鑑定のお申し込みありがとうございます。";//メールの件名
+// $header = "From: info@fortunetelling.com";//送信元アドレス（ダミー）
+// $header .= "\n";//改行
+// $header .= "Bcc: dummy@test.com";//確認メール管理者受信用（ダミー）
+// $message = "この度はFortune Adviserの占い鑑定をお申し込みいただき誠にありがとうございます。" . "\n" . "お客様からのお申し込みを下記内容にて受け付けました。" . "\n" .
+// "\n" .
+// "お名前：" . $_POST["name"] . "\n" .
+// "メールアドレス：" . $_POST["email"] . "\n" .
+// "電話番号：" . $_POST["tel"] . "\n" .
+// "相談したい内容（複数選択可能）：" . $_POST["consultation_content"] . "\n" .
+// "◆自分の情報" . "\n" .
+// "生年月日：" . $_POST["birth_year"] . "年" . $_POST["birth_month"] . "月" .$_POST["birth_date"] . "日" . "\n" .
+// "出生時刻：" . $_POST["birth_hour"] . "時" . $_POST["birth_min"] . "分" . "\n" .
+// "出生地：" . $_POST["birth_place"] . "\n" .
+// "◆相手の情報（占いたい相手がいる場合）" . "\n" .
+// "生年月日：" . $_POST["birth_year2"] . "年" . $_POST["birth_month2"] . "月" .$_POST["birth_date2"] . "日" . "\n" .
+// "出生時刻：" . $_POST["birth_hour2"] . "時" . $_POST["birth_min2"] . "分" . "\n" .
+// "出生地：" . $_POST["birth_place2"] . "\n" .
+// "\n" .
+// "後ほど別メールにて日程調整用のURLをご連絡させていただきます。"."\n" .
+// "お手数ですが、そちらから鑑定の日程調整をお願いいたします。"."\n" .
+// "\n" .
+// "※24時間以内にメールが届かない場合は、お手数ですがcontact@fortune-adviser.comまでご連絡ください。";
 
-// メール送信
- mb_send_mail($to, $subject, $message, $header);
+// // メール送信
+//  mb_send_mail($to, $subject, $message, $header);
 
 ?>
 
