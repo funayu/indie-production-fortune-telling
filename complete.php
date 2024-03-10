@@ -5,10 +5,9 @@ mb_internal_encoding("UTF-8");
 // データ格納
 $to = $_POST["email"];//メール送信先の設定
 $subject = "【Fortune Adviser】鑑定のお申し込みありがとうございます。";//メールの件名
-$header = "From: info@tdp.com";//送信元アドレス
+$header = "From: info@fortunetelling.com";//送信元アドレス（ダミー）
 $header .= "\n";//改行
-$header .= "Bcc: tiro349@moimoi.re";//確認メール管理者受信用
-//$header .= "Bcc: tdp@sairafactory.com";//確認メール管理者受信用
+$header .= "Bcc: dummy@test.com";//確認メール管理者受信用（ダミー）
 $message = "この度はFortune Adviserの占い鑑定をお申し込みいただき誠にありがとうございます。" . "\n" . "お客様からのお申し込みを下記内容にて受け付けました。" . "\n" .
 "\n" .
 "お名前：" . $_POST["name"] . "\n" .
